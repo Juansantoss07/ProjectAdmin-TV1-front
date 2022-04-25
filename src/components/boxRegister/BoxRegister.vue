@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="container">
     <div class="back">
-      <a href="#"><p>Voltar para o login</p></a>
+      <router-link to="/"> <p>Voltar para o login</p></router-link>
     </div>
 
     <div class="box-register">

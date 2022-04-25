@@ -23,8 +23,8 @@ export default {
       </div>
       <div class="btns-login">
         <button class="btn-login">Entrar</button>
-        <a href="google.com"
-          ><button class="btn-register">Registrar-se</button></a
+        <router-link to="/register"
+          ><button class="btn-register">Registrar-se</button></router-link
         >
       </div>
     </form>
