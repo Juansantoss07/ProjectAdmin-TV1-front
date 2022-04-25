@@ -1,0 +1,43 @@
+.box {
+  background-color: #ccc;
+
+
+  .topbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #b3b1b1;
+  }
+
+  .bottombox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: #111;
+        margin: 0.5rem 0;
+      }
+    }
+
+    .right {
+      button {
+        padding: 1rem 2rem;
+        border: 1px solid #b3b1b1;
+        color: #111;
+        background-color: transparent;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+}

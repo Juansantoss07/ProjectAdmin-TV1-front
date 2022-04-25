@@ -1,0 +1,132 @@
+.box-login {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  span {
+    max-width: 50%;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 0.5rem 0;
+      width: 100%;
+      outline: none;
+      border: 1px solid #8d8d8d;
+    }
+
+    .checkbox {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      a {
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .input-check {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+
+        input {
+          width: auto;
+          margin-right: .5rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .btns-login {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+
+      .btn-login {
+        padding: .5rem 1.5rem;
+        color: #fff;
+        background: #000;
+        border: 1px solid #000;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: .5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .btn-register {
+        padding: .5rem 1.5rem;
+        color: #000;
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-left: .5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media(max-width:377px) {
+  h3 {
+    text-align: center;
+    max-width: 70%;
+  }
+
+  span {
+    max-width: 70% !important;
+  }
+
+  .checkbox {
+    flex-direction: column;
+
+    a {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .input-check {
+      width: 100% !important;
+
+      p {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .btns-login {
+    margin-top: 1rem;
+    flex-direction: column;
+
+
+    .btn-login,
+    .btn-register {
+      margin: .5rem 0;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
