@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    color: #000;
+    text-transform: initial;
+    text-decoration: none;
+  }
+
+  .back {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px;
+    padding-left: 1rem;
+  }
+
+  .box-register {
+    padding-left: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    h3 {
+      margin: 1rem 0;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        input {
+          padding: 1rem;
+          margin: 1rem 0;
+          margin-top: 0.3rem;
+          border: 1px solid #8d8d8d;
+          outline: none;
+          width: 100%;
+          border-radius: 5px;
+        }
+
+        input[type=file] {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border: 1px dashed #8d8d8d;
+          cursor: pointer;
+          padding: 3rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:812px) {
+  .box-register {
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .input {
+    width: 95% !important;
+  }
+
+  form {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
