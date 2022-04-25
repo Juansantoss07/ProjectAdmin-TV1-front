@@ -7,7 +7,9 @@ export default {
 <template>
   <div class="container">
     <div class="back">
-      <router-link to="/"> <p>Voltar para o login</p></router-link>
+      <router-link to="/">
+        <p><i class="bi bi-backspace"></i> Voltar para o login</p></router-link
+      >
     </div>
 
     <div class="box-register">
@@ -27,6 +29,16 @@ export default {
         </div>
         <div class="input">
           <input type="file" name="" id="" />
+        </div>
+        <div class="check">
+          <div class="input-check">
+            <input type="checkbox" name="" id="" />
+            <p>Concordo com o termos de uso</p>
+          </div>
+          <span>Ler termos</span>
+        </div>
+        <div class="btns-register">
+          <button class="btn-register">Avançar</button>
         </div>
       </form>
     </div>

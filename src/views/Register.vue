@@ -62,7 +62,8 @@ export default {
     }
 
     .box-left {
-      height: 100vh;
+      height: auto;
+      margin-bottom: 1rem;
     }
   }
 }

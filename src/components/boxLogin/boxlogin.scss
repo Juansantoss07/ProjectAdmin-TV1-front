@@ -20,7 +20,6 @@
 
     input {
       padding: 1rem;
-      border-radius: 5px;
       margin: 0.5rem 0;
       width: 100%;
       outline: none;
@@ -62,11 +61,10 @@
       margin-top: 1rem;
 
       .btn-login {
-        padding: .5rem 1.5rem;
+        padding: 1rem 2rem;
         color: #fff;
         background: #000;
         border: 1px solid #000;
-        border-radius: 3px;
         cursor: pointer;
         margin-right: .5rem;
         text-transform: uppercase;
@@ -74,11 +72,10 @@
       }
 
       .btn-register {
-        padding: .5rem 1.5rem;
+        padding: 1rem 2rem;
         color: #000;
         background: #fff;
         border: 1px solid #000;
-        border-radius: 3px;
         cursor: pointer;
         margin-left: .5rem;
         text-transform: uppercase;
@@ -98,21 +95,32 @@
     max-width: 70% !important;
   }
 
+  form {
+    width: 95% !important;
+  }
+
   .checkbox {
     flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
 
     a {
-      width: 100%;
+      width: auto;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 1rem;
     }
 
     .input-check {
-      width: 100% !important;
+      width: auto !important;
+      align-items: center;
+      justify-content: center;
 
       p {
-        width: 100% !important;
+        width: auto !important;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

@@ -53,7 +53,8 @@ export default {
     flex-direction: column-reverse;
 
     .box-right {
-      height: 100vh;
+      height: auto;
+      margin: 4rem 0;
     }
 
     .box-left {
