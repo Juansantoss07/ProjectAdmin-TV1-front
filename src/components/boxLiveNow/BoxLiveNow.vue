@@ -12,7 +12,7 @@ export default {
           ><i class="bi bi-columns-gap"></i>Acontecendo agora</span
         ></router-link
       >
-      <p>Direcionadores estratégicos 2021</p>
+      <p>Direcionadores estratégicos 2022</p>
       <router-link to="/live"
         ><h5><i class="bi bi-play-fill"></i>Assistir</h5>
       </router-link>

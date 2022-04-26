@@ -10,7 +10,6 @@ export default {
       <div class="logo">
         <img
           src="https://logo-suggestion.renderforest.com/suggestions-images/8804/251c/8804251c3e4e6292d1f1da6bb2236553.png"
-          width="70px"
           alt=""
         />
       </div>
@@ -18,15 +17,22 @@ export default {
       <nav>
         <ul>
           <div class="item">
-            <li>
-              <i class="bi bi-house"></i>
-            </li>
+            <router-link to="/home">
+              <li>
+                <i class="bi bi-house"></i>
+              </li>
+            </router-link>
+
             <div class="sub-menu">Home</div>
           </div>
+
           <div class="item">
-            <li>
-              <i class="bi bi-broadcast"></i>
-            </li>
+            <router-link to="/live">
+              <li>
+                <i class="bi bi-broadcast"></i>
+              </li>
+            </router-link>
+
             <div class="sub-menu">Live</div>
           </div>
           <div class="item">

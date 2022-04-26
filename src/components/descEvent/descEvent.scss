@@ -1,0 +1,31 @@
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .box-left-desc,
+  .box-right-desc {
+    width: 49%;
+  }
+
+  .box-left-desc,
+  .box-right-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    background-color: #e0e0e0;
+    height: 100%;
+
+    h2 {
+      margin: 1rem 0;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+}

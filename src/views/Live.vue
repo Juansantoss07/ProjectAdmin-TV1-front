@@ -1,37 +1,39 @@
 <script>
 import Navbar from "../components/navbar/Navbar.vue";
-import ContentHome from "../components/contentHome/ContentHome.vue";
-import BoxLiveNow from "../components/boxLiveNow/BoxLiveNow.vue";
-import DescEvent from "../components/descEvent/DescEvent.vue";
+import LiveIframe from "../components/liveIframe/LiveIframe.vue";
 import Footer from "../components/footer/Footer.vue";
 
 export default {
-  name: "HomeView",
+  name: "Live",
 
   components: {
     Navbar,
-    ContentHome,
-    BoxLiveNow,
-    DescEvent,
+    LiveIframe,
     Footer,
   },
 };
 </script>
 
 <template>
-  <div class="content-home">
-    <Navbar />
-    <div class="container">
-      <ContentHome />
-      <BoxLiveNow />
-      <DescEvent />
-      <Footer />
+  <div class="body-live">
+    <div class="content-live">
+      <Navbar />
+
+      <div class="container">
+        <LiveIframe />
+        <Footer />
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.content-home {
+.body-live {
+  width: 100%;
+  height: 100%;
+}
+
+.content-live {
   width: 100%;
   display: flex;
   padding: 1rem;
