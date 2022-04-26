@@ -46,4 +46,10 @@ export default {
     padding-left: 6.5rem;
   }
 }
+
+@media (max-width: 787px) {
+  .container {
+    padding-left: 1rem !important;
+  }
+}
 </style>
