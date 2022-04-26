@@ -1,6 +1,7 @@
 <script>
 import Navbar from "../components/navbar/Navbar.vue";
 import ContentHome from "../components/contentHome/ContentHome.vue";
+import BoxLiveNow from "../components/boxLiveNow/BoxLiveNow.vue";
 
 export default {
   name: "HomeView",
@@ -8,6 +9,7 @@ export default {
   components: {
     Navbar,
     ContentHome,
+    BoxLiveNow,
   },
 };
 </script>
@@ -15,7 +17,10 @@ export default {
 <template>
   <div class="content-home">
     <Navbar />
-    <ContentHome />
+    <div class="container">
+      <ContentHome />
+      <BoxLiveNow />
+    </div>
   </div>
 </template>
 
@@ -23,5 +28,14 @@ export default {
 .content-home {
   width: 100%;
   display: flex;
+  padding: 1rem;
+  padding-left: 0;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6.5rem;
+  }
 }
 </style>
