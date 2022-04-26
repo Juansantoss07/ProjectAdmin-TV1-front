@@ -16,3 +16,14 @@ footer {
     }
   }
 }
+
+@media(max-width:787px) {
+  .container-footer {
+    flex-direction: column;
+
+    p {
+      margin: 0.5rem 0 !important;
+      text-align: center;
+    }
+  }
+}

@@ -26,7 +26,7 @@ header {
       justify-content: center;
 
       img {
-        width: 90%;
+        width: 100%;
       }
     }
 
@@ -109,5 +109,11 @@ header {
 @media(max-height:550px) {
   .box-header {
     overflow-y: scroll;
+  }
+}
+
+@media(max-width:787px) {
+  header {
+    display: none;
   }
 }

@@ -59,3 +59,32 @@
     }
   }
 }
+
+@media(max-width:787px) {
+  .container-box-home {
+    flex-direction: column;
+
+    .box-left-container,
+    .box-right-container {
+      width: 100% !important;
+      margin: 1rem 0;
+    }
+
+    .box-left-container {
+      align-items: center !important;
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-left: 0 !important;
+      }
+    }
+
+    .box-right-container {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}

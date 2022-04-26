@@ -29,3 +29,15 @@
   }
 
 }
+
+@media(max-width:787px) {
+  .content {
+    flex-direction: column;
+
+    .box-left-desc,
+    .box-right-desc {
+      width: 100% !important;
+      margin: .5rem 0 !important;
+    }
+  }
+}

@@ -63,3 +63,22 @@
     }
   }
 }
+
+@media(max-width:787px) {
+  .conteiner-live {
+    height: auto;
+  }
+
+  .box-comentary {
+    flex-direction: column;
+
+    .btns-icons {
+      width: 100% !important;
+      margin: .5rem 0 !important;
+    }
+
+    form {
+      width: 100% !important;
+    }
+  }
+}

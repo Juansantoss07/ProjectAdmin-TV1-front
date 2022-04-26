@@ -24,3 +24,13 @@
     color: #3a68ff;
   }
 }
+
+@media(max-width:787px) {
+  .box-livenow {
+    flex-direction: column;
+
+    p {
+      margin: 0.5rem 0 !important;
+    }
+  }
+}

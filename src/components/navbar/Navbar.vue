@@ -8,10 +8,7 @@ export default {
   <header>
     <div class="box-header">
       <div class="logo">
-        <img
-          src="https://logo-suggestion.renderforest.com/suggestions-images/8804/251c/8804251c3e4e6292d1f1da6bb2236553.png"
-          alt=""
-        />
+        <img src="/images/logo_transparent_1.png" alt="" />
       </div>
 
       <nav>
