@@ -22,6 +22,11 @@ const router = createRouter({
       path: '/live',
       name: 'live',
       component: () => import('../views/Live.vue')
+    },
+    {
+      path: '/recoverpassword',
+      name: 'recoverpassword',
+      component: () => import('../views/RecoverPassword.vue')
     }
   ]
 })

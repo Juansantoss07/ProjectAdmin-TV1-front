@@ -19,7 +19,9 @@ export default {
           <input type="checkbox" name="" id="" />
           <p>Continuar conectado</p>
         </div>
-        <a href="#">Esqueci minha senha</a>
+        <router-link to="recoverpassword"
+          ><a href="#">Esqueci minha senha</a></router-link
+        >
       </div>
       <div class="btns-login">
         <router-link to="/home">
