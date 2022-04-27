@@ -4,6 +4,7 @@ import ContentHome from "../components/contentHome/ContentHome.vue";
 import BoxLiveNow from "../components/boxLiveNow/BoxLiveNow.vue";
 import DescEvent from "../components/descEvent/DescEvent.vue";
 import Footer from "../components/footer/Footer.vue";
+import MenuMobile from "../components/menuMobile/MenuMobile.vue";
 
 export default {
   name: "HomeView",
@@ -14,6 +15,7 @@ export default {
     BoxLiveNow,
     DescEvent,
     Footer,
+    MenuMobile,
   },
 };
 </script>
@@ -22,6 +24,7 @@ export default {
   <div class="content-home">
     <Navbar />
     <div class="container">
+      <MenuMobile />
       <ContentHome />
       <BoxLiveNow />
       <DescEvent />
@@ -48,6 +51,7 @@ export default {
 @media (max-width: 787px) {
   .container {
     padding-left: 1rem !important;
+    padding-top: 75px !important;
   }
 }
 </style>

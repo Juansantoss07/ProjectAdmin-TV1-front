@@ -22,7 +22,10 @@ export default {
         <a href="#">Esqueci minha senha</a>
       </div>
       <div class="btns-login">
-        <button class="btn-login">Entrar</button>
+        <router-link to="/home">
+          <button class="btn-login">Entrar</button>
+        </router-link>
+
         <router-link to="/register"
           ><button class="btn-register">Registrar-se</button></router-link
         >

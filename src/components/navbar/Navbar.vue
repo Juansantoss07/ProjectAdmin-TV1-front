@@ -33,9 +33,11 @@ export default {
             <div class="sub-menu">Live</div>
           </div>
           <div class="item">
-            <li>
-              <i class="bi bi-box-arrow-left"></i>
-            </li>
+            <router-link to="/">
+              <li>
+                <i class="bi bi-box-arrow-left"></i>
+              </li>
+            </router-link>
             <div class="sub-menu">Logout</div>
           </div>
         </ul>

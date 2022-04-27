@@ -113,7 +113,10 @@ header {
 }
 
 @media(max-width:787px) {
-  header {
+
+  header,
+  .box-header {
     display: none;
   }
+
 }

@@ -2,6 +2,7 @@
 import Navbar from "../components/navbar/Navbar.vue";
 import LiveIframe from "../components/liveIframe/LiveIframe.vue";
 import Footer from "../components/footer/Footer.vue";
+import MenuMobile from "../components/menuMobile/MenuMobile.vue";
 
 export default {
   name: "Live",
@@ -10,6 +11,7 @@ export default {
     Navbar,
     LiveIframe,
     Footer,
+    MenuMobile,
   },
 };
 </script>
@@ -20,6 +22,7 @@ export default {
       <Navbar />
 
       <div class="container">
+        <MenuMobile />
         <LiveIframe />
         <Footer />
       </div>
@@ -50,6 +53,7 @@ export default {
 @media (max-width: 787px) {
   .container {
     padding-left: 1rem !important;
+    padding-top: 75px !important;
   }
 }
 </style>
