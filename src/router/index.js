@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Guard from '../services/middleware'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,12 +17,14 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
-      component: () => import('../views/Home.vue')
+      component: () => import('../views/Home.vue'),
+      beforeEnter: Guard.auth
     },
     {
       path: '/live',
       name: 'live',
-      component: () => import('../views/Live.vue')
+      component: () => import('../views/Live.vue'),
+      beforeEnter: Guard.auth
     },
     {
       path: '/recoverpassword',
