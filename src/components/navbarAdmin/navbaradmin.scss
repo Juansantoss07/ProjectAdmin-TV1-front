@@ -1,0 +1,135 @@
+header {
+  height: 100vh;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+
+  .box-header {
+    //display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #e0e0e0;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+      margin: 1rem 0;
+      margin-bottom: 0;
+      display: flex;
+      font-size: 22px;
+      font-weight: 800;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+
+  nav {
+    width: 100%;
+    height: 70%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem 0;
+    cursor: pointer;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: 2px solid #ffff00;
+    }
+
+    li {
+      padding: 1rem;
+      background-color: #c2c2c2;
+      list-style: none;
+    }
+
+    .sub-menu {
+      padding: 1rem;
+      background-color: #222;
+      position: absolute;
+      left: 90px;
+      display: none;
+      color: #f1f1f1;
+    }
+  }
+
+  .profile {
+    .item:hover {
+      background: transparent;
+
+      li {
+        background: transparent;
+        color: #f1f1f1;
+      }
+
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
+
+  .item:hover {
+    background: #222;
+
+    li {
+      background: transparent;
+      color: #f1f1f1;
+    }
+
+    .sub-menu {
+      display: block;
+    }
+
+    #submenu-not {
+      height: 60vh;
+      width: 40vw;
+
+      .box-not {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+      }
+    }
+  }
+}
+
+@media(max-height:550px) {
+  .box-header {
+    overflow-y: scroll;
+  }
+}
+
+@media(max-width:787px) {
+
+  header,
+  .box-header {
+    display: none;
+  }
+
+}

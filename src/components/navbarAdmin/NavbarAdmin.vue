@@ -1,17 +1,6 @@
 <script>
 export default {
-  name: "Navbar",
-
-  data() {
-    return {
-      user: null,
-    };
-  },
-  mounted() {
-    axios.get("/api/user").then((res) => {
-      this.user = res.data;
-    });
-  },
+  name: "NavbarAdmin",
 };
 </script>
 
@@ -25,23 +14,27 @@ export default {
       <nav>
         <ul>
           <div class="item">
-            <router-link to="/home">
+            <router-link to="/dashboard">
               <li>
-                <i class="bi bi-house"></i>
+                <i class="bi bi-speedometer"></i>
               </li>
             </router-link>
 
-            <div class="sub-menu">Home</div>
+            <div class="sub-menu">Dashboard</div>
           </div>
 
           <div class="item">
-            <router-link to="/live">
-              <li>
-                <i class="bi bi-broadcast"></i>
-              </li>
-            </router-link>
+            <li>
+              <i class="bi bi-bell-fill"></i>
+            </li>
 
-            <div class="sub-menu">Live</div>
+            <div id="submenu-not" class="sub-menu">
+              Notificações
+              <div class="box-not">
+                <h2>Notificação teste</h2>
+                <p>Fulano curtiu o vídeo</p>
+              </div>
+            </div>
           </div>
           <div class="item">
             <router-link to="/">
@@ -60,11 +53,11 @@ export default {
             src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt=""
           />
-          <div class="sub-menu">Olá, {{ user.name }}!</div>
+          <div class="sub-menu">Olá, Usuário!</div>
         </div>
       </div>
     </div>
   </header>
 </template>
 
-<style lang="scss" src="./navbar.scss" scoped/>
+<style lang="scss" src="./navbaradmin.scss" scoped/>

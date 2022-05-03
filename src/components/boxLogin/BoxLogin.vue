@@ -1,48 +1,3 @@
-<script>
-import Cookie from "js-cookie";
-
-export default {
-  name: "BoxLogin",
-
-  data() {
-    return {
-      email: "",
-      password: "",
-    };
-  },
-
-  /*created() {
-    Cookie.remove("_myapp_token");
-  },*/
-
-  methods: {
-    submit() {
-      const payload = {
-        email: this.email,
-        password: this.password,
-      };
-
-      fetch(`http://127.0.0.1:8000/api/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Acess: "application/json",
-        },
-        body: JSON.stringify(payload),
-      })
-        .then((response) => response.json())
-        .then((res) => {
-          Cookie.set("_myapp_token", res.access_token);
-        });
-    },
-
-    if(_myapp_token) {
-      next("/home");
-    },
-  },
-};
-</script>
-
 <template>
   <div class="box-login">
     <h3>Seu primeiro passo antes de se reiventar</h3>
@@ -50,16 +5,16 @@ export default {
       Aqui começa o futuro. Insira seu e-mail e senha abaixo para fazer login e
       iniciar sua jornada conosco.
     </span>
-    <form @submit.stop.prevent="submit">
+    <form>
       <input
-        v-model="email"
-        type="email"
+        v-model="form.email"
+        type="form.email"
         name=""
         id=""
         placeholder="E-mail comercial"
       />
       <input
-        v-model="password"
+        v-model="form.password"
         type="password"
         name=""
         id=""
@@ -75,7 +30,12 @@ export default {
         >
       </div>
       <div class="btns-login">
-        <input type="submit" class="btn-login" value="ENTRAR" />
+        <input
+          @click.prevent="loginUser"
+          type="submit"
+          class="btn-login"
+          value="ENTRAR"
+        />
 
         <router-link to="/register"
           ><button class="btn-register">Registrar-se</button></router-link
@@ -84,5 +44,35 @@ export default {
     </form>
   </div>
 </template>
+
+<script>
+export default {
+  name: "BoxLogin",
+
+  data() {
+    return {
+      form: {
+        email: "",
+        password: "",
+      },
+      errors: [],
+    };
+  },
+
+  methods: {
+    loginUser() {
+      const axios = require("axios").default;
+      axios
+        .post("http://127.0.0.1:8000/api/login", this.form)
+        .then(() => {
+          this.$router.push({ name: "home" });
+        })
+        .catch((error) => {
+          this.errors = error.response.data.errors;
+        });
+    },
+  },
+};
+</script>
 
 <style lang="scss" src="./boxlogin.scss" scoped/>

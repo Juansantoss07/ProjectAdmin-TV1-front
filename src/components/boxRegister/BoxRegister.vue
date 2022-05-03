@@ -1,22 +1,4 @@
-<script>
-export default {
-  name: "BoxRegister",
 
-  methods: {
-    openmodal1() {
-      var modal1 = document.getElementById("modal1");
-
-      modal1.style.display = "flex";
-    },
-
-    closemodal() {
-      var modal1 = document.getElementById("modal1");
-
-      modal1.style.display = "none";
-    },
-  },
-};
-</script>
 
 <template>
   <div class="modal-box" id="modal1">
@@ -47,15 +29,34 @@ export default {
       <form action="">
         <div class="input">
           <label for="">Nome completo</label>
-          <input type="text" name="" id="" placeholder="Seu nome" />
+          <span v-if="errors.name">{{ errors.name[0] }}</span>
+          <input
+            v-model="form.name"
+            type="text"
+            name=""
+            id=""
+            placeholder="Seu nome"
+          />
         </div>
         <div class="input">
           <label for="">E-mail</label>
-          <input type="email" name="" id="" placeholder="nome@mail.com" />
+          <input
+            v-model="form.email"
+            type="email"
+            name=""
+            id=""
+            placeholder="nome@mail.com"
+          />
         </div>
         <div class="input">
           <label for="">Senha</label>
-          <input type="password" name="" id="" placeholder="* * * *" />
+          <input
+            v-model="form.password"
+            type="password"
+            name=""
+            id=""
+            placeholder="* * * *"
+          />
         </div>
         <div class="input">
           <input type="file" name="" id="" />
@@ -68,11 +69,59 @@ export default {
           <span v-on:click="openmodal1()">Ler termos</span>
         </div>
         <div class="btns-register">
-          <button class="btn-register">Avançar</button>
+          <button
+            @click.prevent="saveForm()"
+            type="submit"
+            class="btn-register"
+          >
+            Avançar
+          </button>
         </div>
       </form>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "BoxRegister",
+
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        password: "",
+      },
+      errors: [],
+    };
+  },
+
+  methods: {
+    openmodal1() {
+      var modal1 = document.getElementById("modal1");
+
+      modal1.style.display = "flex";
+    },
+
+    closemodal() {
+      var modal1 = document.getElementById("modal1");
+
+      modal1.style.display = "none";
+    },
+  },
+  saveForm() {
+    const axios = require("axios").default;
+    axios
+      .post("http://127.0.0.1:8000/api/register", this.form)
+      .then(() => {
+        console.log("saved");
+      })
+      .catch((error) => {
+        this.errors = error.response.data.errors;
+      });
+  },
+};
+</script>
 
 <style lang="scss" src="./boxregister.scss" scoped/>
