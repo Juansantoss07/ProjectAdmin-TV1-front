@@ -1,5 +1,5 @@
 <script>
-//import NavbarAdmin from "../components/navbarAdmin/NavbarAdmin.vue";
+import NavbarAdmin from "../components/navbarAdmin/NavbarAdmin.vue";
 export default {
   name: "HomeAdmin",
 

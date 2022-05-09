@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="modal-box" id="modal1">
     <div class="modal1">
@@ -26,100 +24,55 @@
 
     <div class="box-register">
       <h3>Dados pessoais</h3>
-      <form action="">
+      <form>
         <div class="input">
           <label for="">Nome completo</label>
-          <span v-if="errors.name">{{ errors.name[0] }}</span>
-          <input
-            v-model="form.name"
-            type="text"
-            name=""
-            id=""
-            placeholder="Seu nome"
-          />
+          <input type="text" placeholder="Seu nome" required />
         </div>
         <div class="input">
           <label for="">E-mail</label>
-          <input
-            v-model="form.email"
-            type="email"
-            name=""
-            id=""
-            placeholder="nome@mail.com"
-          />
+          <input type="email" placeholder="nome@mail.com" required />
         </div>
         <div class="input">
           <label for="">Senha</label>
           <input
-            v-model="form.password"
             type="password"
-            name=""
-            id=""
             placeholder="* * * *"
+            autocomplete="on"
+            required
           />
         </div>
         <div class="input">
-          <input type="file" name="" id="" />
+          <input type="file" />
         </div>
         <div class="check">
           <div class="input-check">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" />
             <p>Concordo com o termos de uso</p>
           </div>
           <span v-on:click="openmodal1()">Ler termos</span>
         </div>
         <div class="btns-register">
-          <button
-            @click.prevent="saveForm()"
-            type="submit"
-            class="btn-register"
-          >
-            Avançar
-          </button>
+          <button class="btn-register">Avançar</button>
         </div>
       </form>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "BoxRegister",
-
-  data() {
-    return {
-      form: {
-        name: "",
-        email: "",
-        password: "",
-      },
-      errors: [],
-    };
-  },
 
   methods: {
     openmodal1() {
       var modal1 = document.getElementById("modal1");
-
       modal1.style.display = "flex";
     },
-
     closemodal() {
       var modal1 = document.getElementById("modal1");
-
       modal1.style.display = "none";
     },
-  },
-  saveForm() {
-    const axios = require("axios").default;
-    axios
-      .post("http://127.0.0.1:8000/api/register", this.form)
-      .then(() => {
-        console.log("saved");
-      })
-      .catch((error) => {
-        this.errors = error.response.data.errors;
-      });
   },
 };
 </script>

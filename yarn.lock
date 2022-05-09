@@ -401,6 +401,11 @@
   dependencies:
     "is-number" "^7.0.0"
 
+"typescript@^4.6.4":
+  "integrity" "sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.6.4.tgz"
+  "version" "4.6.4"
+
 "vite@^2.5.10", "vite@^2.9.5":
   "integrity" "sha512-dvMN64X2YEQgSXF1lYabKXw3BbN6e+BL67+P3Vy4MacnY+UzT1AfkHiioFSi9+uiDUiaDy7Ax/LQqivk6orilg=="
   "resolved" "https://registry.npmjs.org/vite/-/vite-2.9.5.tgz"

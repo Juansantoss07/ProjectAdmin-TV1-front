@@ -1,6 +1,32 @@
 <script>
+import axios from "axios";
+
 export default {
   name: "NavbarAdmin",
+
+  created() {
+    this.loadNotifications();
+  },
+
+  computed: {
+    notifications() {
+      return this.notifications;
+    },
+  },
+
+  data() {
+    return {
+      notifications: [],
+    };
+  },
+
+  methods: {
+    loadNotifications() {
+      axios.get("/notifications").then((response) => {
+        console.log(response);
+      });
+    },
+  },
 };
 </script>
 
@@ -29,10 +55,11 @@ export default {
             </li>
 
             <div id="submenu-not" class="sub-menu">
-              Notificações
+              <h2>Notificações</h2>
               <div class="box-not">
-                <h2>Notificação teste</h2>
-                <p>Fulano curtiu o vídeo</p>
+                <p v-for="notification in notifications" :key="notification">
+                  {{ notification }}
+                </p>
               </div>
             </div>
           </div>

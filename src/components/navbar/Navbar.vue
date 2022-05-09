@@ -1,17 +1,7 @@
+
 <script>
 export default {
   name: "Navbar",
-
-  data() {
-    return {
-      user: null,
-    };
-  },
-  mounted() {
-    axios.get("/api/user").then((res) => {
-      this.user = res.data;
-    });
-  },
 };
 </script>
 
@@ -60,7 +50,7 @@ export default {
             src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt=""
           />
-          <div class="sub-menu">Olá, {{ user.name }}!</div>
+          <div class="sub-menu">Olá, User!</div>
         </div>
       </div>
     </div>

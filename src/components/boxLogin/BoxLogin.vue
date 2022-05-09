@@ -6,33 +6,26 @@
       iniciar sua jornada conosco.
     </span>
     <form>
+      <input v-model="email" type="email" placeholder="E-mail comercial" />
       <input
-        v-model="form.email"
-        type="form.email"
-        name=""
-        id=""
-        placeholder="E-mail comercial"
-      />
-      <input
-        v-model="form.password"
+        v-model="password"
         type="password"
-        name=""
-        id=""
         placeholder="Senha"
+        autocomplete="on"
       />
       <div class="checkbox">
         <div class="input-check">
           <input type="checkbox" name="" id="" />
           <p>Continuar conectado</p>
         </div>
-        <router-link to="recoverpassword"
+        <router-link to="/recoverpassword"
           ><a href="#">Esqueci minha senha</a></router-link
         >
       </div>
       <div class="btns-login">
         <input
-          @click.prevent="loginUser"
           type="submit"
+          @click.prevent="submit"
           class="btn-login"
           value="ENTRAR"
         />
@@ -45,30 +38,30 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "BoxLogin",
 
   data() {
     return {
-      form: {
-        email: "",
-        password: "",
-      },
-      errors: [],
+      email: "",
+      password: "",
+      post: "",
     };
   },
-
   methods: {
-    loginUser() {
-      const axios = require("axios").default;
-      axios
-        .post("http://127.0.0.1:8000/api/login", this.form)
-        .then(() => {
-          this.$router.push({ name: "home" });
+    submit() {
+      var data = { email: this.email, password: this.password };
+      console.log(data);
+
+      this.$http
+        .post("login", data)
+        .then((response) => {
+          console.log(response);
         })
+
         .catch((error) => {
-          this.errors = error.response.data.errors;
+          console.log(error);
         });
     },
   },
