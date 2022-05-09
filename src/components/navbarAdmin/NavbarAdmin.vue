@@ -80,7 +80,7 @@ export default {
             src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt=""
           />
-          <div class="sub-menu">Olá, Usuário!</div>
+          <div class="sub-menu">Olá, {{ user }}!</div>
         </div>
       </div>
     </div>
